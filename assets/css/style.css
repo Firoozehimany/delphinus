@@ -1,24 +1,166 @@
-@import url(fontface.css);
+@import url(reset.css);
+@import url(font-face.css);
 @import url(fontawesome.css);
 @import url(solid.css);
 @import url(brands.css);
 
 html {
-
+    font-size: 16px;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    direction: ltr;
+    font-family: karla;
+    background: #f6f6f6;
 }
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none
+* , *:after , *:before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
 }
 
-a {
-    text-decoration: none;
+.container-full {
+    max-width:100%;
+}
+
+.container {
+    max-width:100%;
+    padding: 0 76px;
+}
+
+.container-content {
+
+}
+
+#header-section {
+    background: #fff;
+}
+
+#header-section a {
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#header-section a:hover {
+    color: #000;
+}
+
+#header-section .top-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #f6f6f6;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+#header-section .top-header .switchers ul {
+    display: flex;
+}
+
+#header-section .top-header .top-menu ul {
+    display: flex;
+    align-items: center;
+}
+
+#header-section .top-header .switchers ul li {
+    padding: 20px 36px;
+    border-right: 1px solid #f6f6f6;
+}
+
+#header-section .top-header .top-menu ul li {
+    padding: 16px 20px;
+    border-left: 1px solid #f6f6f6;
+}
+
+#header-section .top-header .top-menu ul li.card a {
+    display: flex;
+    align-items: center;
+}
+
+#header-section .top-header .top-menu .card-count {
+    color: #000;
+    border: 2px solid #000;
+    padding: 2px 9px;
+    margin-left: 20px;
+}
+
+#header-section .bottom-header {
+    box-shadow: 0 2px 6px #0000000d;
+}
+
+#header-section .bottom-header .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 104px;
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+#header-section .bottom-header .logo img {
+    width: 170px;
+    height: auto;
+}
+
+#header-section .bottom-header .main-menu ul {
+    display: flex;
+    justify-content:center;
+}
+
+#header-section .bottom-header .main-menu ul li {
+    padding: 32px;
+}
+
+#header-section .bottom-header .main-menu i {
+    font-size: 0.6rem;
+}
+
+#header-section .bottom-header .search i {
+    font-size: 1rem;
+    padding-left: 30px;
+}
+
+#header-section .bottom-header .responsive-main-menu {
+    display: none;
+    font-size: 1.5rem;
+    color: #999;
+    align-items: center;
+}
+
+#header-section .bottom-header .responsive-main-menu .shop {
+    position: relative;
+    margin-right: 20px;
+}
+
+#header-section .bottom-header .responsive-main-menu .shop span{
+    font-size: 1rem;
+    color: #000;
+    position: absolute;
+    top:-14;
+    right:0
+}
+
+@media screen and (max-width:1024px) {
+
+    #header-section .top-header {
+        display: none;
+    }
+
+    #header-section .bottom-header .main-menu {
+        display: none;
+    }
+
+    #header-section .bottom-header .search i {
+        display: none;
+    }
+
+    #header-section .bottom-header .responsive-main-menu {
+        display: flex;
+    }
+
+    #header-section .bottom-header .info {
+        height: 80px;
+    }
 }

@@ -4,13 +4,8 @@
 @import url(solid.css);
 @import url(brands.css);
 
-html {
-    font-size: 16px;
-}
-
 body {
-    font-family: karla;
-    background: #f6f6f6;
+    font-family: 'Karla';
 }
 
 * , *:after , *:before {
@@ -21,11 +16,11 @@ body {
 }
 
 .container-full {
-    max-width:100%;
+    max-width: 100%;
 }
 
 .container {
-    max-width:100%;
+    max-width: 100%;
     padding: 0 76px;
 }
 
@@ -51,7 +46,7 @@ body {
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #f6f6f6;
-    font-size: 0.85rem;
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -88,6 +83,8 @@ body {
 
 #header-section .bottom-header {
     box-shadow: 0 2px 6px #0000000d;
+    position: relative;
+    z-index: 120;
 }
 
 #header-section .bottom-header .info {
@@ -95,7 +92,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 104px;
-    font-size: 0.95rem;
+    font-size: 16px;
     font-weight: 700;
 }
 
@@ -106,43 +103,141 @@ body {
 
 #header-section .bottom-header .main-menu ul {
     display: flex;
-    justify-content:center;
+    justify-content: center;
 }
 
 #header-section .bottom-header .main-menu ul li {
     padding: 32px;
 }
 
-#header-section .bottom-header .main-menu i {
-    font-size: 0.6rem;
+#header-section .bottom-header .main-menu ul li a {
+    letter-spacing: 1px;
 }
 
 #header-section .bottom-header .search i {
-    font-size: 1rem;
+    font-size: 16px;
     padding-left: 30px;
 }
 
 #header-section .bottom-header .responsive-main-menu {
     display: none;
-    font-size: 1.5rem;
-    color: #999;
+    font-size: 20px;
     align-items: center;
+    position: relative;
 }
 
 #header-section .bottom-header .responsive-main-menu .shop {
     position: relative;
-    margin-right: 20px;
+    margin-right: 24px;
 }
 
 #header-section .bottom-header .responsive-main-menu .shop span{
-    font-size: 1rem;
+    font-size: 12px;
+    font-weight: 300;
     color: #000;
     position: absolute;
-    top:-14;
-    right:0
+    top: -12;
+    right: 0;
 }
 
-@media screen and (max-width:1024px) {
+#hero-section {
+    position: relative;
+}
+
+#hero-section:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 50%;
+    background: #f6f6f6;
+    top: 0;
+    left: 0;
+}
+
+#hero-section .product-section {
+    padding: 90px 20px;
+    position: relative;
+}
+
+#hero-section .product-section a {
+    color: #000;
+}
+
+#hero-section .product-section a:hover {
+    color: #333;
+}
+
+#hero-section .product-section a h3 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-top: 32px;
+}
+
+#hero-section .product-section ul.product {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+#hero-section .product-section ul.product span {
+    font-size: 16px;
+    color: #999;
+    font-weight: 700;
+}
+
+#hero-section .product-section ul.stars {
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+}
+
+#hero-section .product-section ul.stars li {
+    padding: 16px 2px;
+    color: #c6c6c6
+}
+
+#hero-section .arrow ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+#hero-section .arrow ul li {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    box-shadow: 0 2px 6px #0000000d;
+}
+
+#hero-section .arrow ul li.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    display: block;
+    margin-right: 20px;
+}
+
+#hero-section .arrow ul li.perv {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    margin-left: 20px;
+}
+
+#hero-section .arrow ul li i {
+    color: #999;
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    padding: 17px 15px;
+}
+
+@media screen and (max-width:1200px) {
 
     #header-section .top-header {
         display: none;
@@ -162,5 +257,25 @@ body {
 
     #header-section .bottom-header .info {
         height: 80px;
+    }
+}
+
+@media screen and (max-width:960px) {
+    #hero-section .product-section ul.product {
+        justify-content: center;
+    }
+
+    #hero-section .product-section ul.product li.third {
+        display: none;
+    }
+}
+
+@media screen and (max-width:540px) {
+    #hero-section .product-section ul.product {
+        justify-content: center;
+    }
+    
+    #hero-section .product-section ul.product li.secound {
+        display: none;
     }
 }

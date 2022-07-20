@@ -578,12 +578,122 @@ h3 {
     width: 100%;
 }
 
-
-
 #brands ul {
     display: flex;
     justify-content: space-between;
     padding: 100px 0;
+}
+
+#top-footer ul {
+    width: 100%;
+    background: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 100px 0;
+}
+
+#top-footer ul li {
+    display: inline-block;
+    padding: 32px 30px;
+    background: #fff;
+    box-shadow: 0 2px 6px #0000000d;
+    text-align: center;
+    overflow: hidden;
+    width: 560px;
+}
+
+#top-footer ul li a {
+    color: #000;
+}
+
+#top-footer ul li h2 {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: 'Roboto Slab';
+}
+
+#top-footer ul li p {
+    display: none;
+}
+
+#footer .footer-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .footer-list h2 {
+    font-family:'Roboto Slab';
+    letter-spacing: 3px;
+    color: #000;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 50px 0 40px;
+}
+
+#footer .footer-list .information {
+    margin-left: 50px;
+}
+
+#footer .footer-list .story {
+    background: url(../images/footer_story_content.jpeg);
+    width: 33.33%;
+    height: 380px;
+    padding: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+#footer .footer-list .story h2{
+    color: #fff;
+    margin-top: 0;
+}
+
+#footer .footer-list .story p {
+    color: #fff;
+    font-size: 14px; 
+    font-weight: 300;
+    line-height: 30px;
+    display: none;
+}
+
+#footer .footer-list .story:hover  p {
+    display: block;
+}
+
+#footer .footer-list input {
+    width: 100%;
+    height: 44px;
+    padding: 5px 40px 10px 10px;
+    font-size: 14px;
+    border: 0;
+    border-bottom: 2px solid #dddddd;
+}
+
+#footer .footer-list a {
+    color: #666;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 40px;
+}
+
+#footer .footer-list a:hover {
+    color: #000;
+}
+
+#footer .footer-list .social {
+    display: flex;
+    gap: 40px;
+    margin: 50px 0 30px;
+    color: #0000000d;
+}
+
+#footer .footer-list .newslatter p {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    font-weight: 300;
 }
 
 @media screen and (max-width:1200px) {
@@ -607,8 +717,6 @@ h3 {
     #header-section .bottom-header .info {
         height: 80px;
     }
-
-    
 }
 
 @media screen and (max-width:960px) {

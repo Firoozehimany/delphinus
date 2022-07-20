@@ -16,10 +16,16 @@ body {
 }
 
 a {
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
-    -ms-transition: all 1s;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+}
+
+h3 {
+    font-family: 'Roboto Slab';
+    font-size: 16px;
+    letter-spacing: 2px;
 }
 
 .container-full {
@@ -50,6 +56,37 @@ a {
 .buttom:hover {
     background: #fff;
     color: #000;
+}
+
+.header-box {
+    text-align: center;
+    padding: 90px 0 60px;
+}
+
+.header-box .title {
+    font-family: 'Roboto Slab';
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 30px 0 20px;
+}
+
+.header-box .subtitle a {
+    font-size: 12px;
+    font-weight: 300;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.header-box .subtitle a:hover {
+    color: #000;
+}
+
+.header-box img {
+    width: 60px;
 }
 
 #header-section {
@@ -189,13 +226,6 @@ a {
 
 #hero-section .product-section a:hover {
     color: #333;
-}
-
-#hero-section .product-section a h3 {
-    font-family: 'Roboto Slab';
-    font-size: 16px;
-    letter-spacing: 2px;
-    margin-top: 32px;
 }
 
 #hero-section .product-section ul.product {
@@ -381,7 +411,115 @@ a {
     color: #fff
 }
 
+#featured-products .product-list ul.list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
+#featured-products .product-list ul.list li.product {
+    display: flex;
+    gap:30px;
+    padding-bottom: 30px;
+    width: 334px;
+}
+
+#featured-products .product-list img {
+    width: 160px;
+    height: 160px;
+}
+
+#featured-products .product-list h3 {
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+#featured-products .product-list a {
+    color: #000;
+}
+
+#featured-products .product-list :hover {
+    color: #666;
+}
+
+#featured-products .product-list span {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+}
+
+#featured-products .product-list ul.stars {
+    display: flex;
+    font-size: 11px;
+    margin-top: 12px;
+}
+
+#featured-products .product-list ul.stars li {
+    padding: 0 2px;
+    color: #c6c6c6
+}
+
+#new-arrivals .arrivals-list ul{
+    display: flex;
+    flex-wrap: wrap;   
+}
+
+#new-arrivals .arrivals-list ul li {
+    position: relative;
+}
+
+#new-arrivals .arrivals-list ul li:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+#new-arrivals .arrivals-list ul li .info {
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    display: none;
+}
+
+#new-arrivals .arrivals-list ul li:hover li:before {
+    display: block;
+}
+
+#new-arrivals .arrivals-list ul li {
+    width: 25%;
+    display: block;
+}
+
+#new-arrivals .arrivals-list ul li img {
+    width:100%
+}
+
+#about-us .content-list ul.bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#about-us .content-list ul.bottom img {
+    width: 100%;
+}
+
+#brands ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 @media screen and (max-width:1200px) {
 
     #header-section .top-header {

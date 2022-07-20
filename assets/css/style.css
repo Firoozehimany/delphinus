@@ -580,6 +580,7 @@ h3 {
 
 #brands ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 100px 0;
 }
@@ -631,7 +632,7 @@ h3 {
     margin: 50px 0 40px;
 }
 
-#footer .footer-list .information {
+#footer .footer-list .information ,#footer .footer-list .collection , #footer .footer-list .newslatter {
     margin-left: 50px;
 }
 
@@ -734,6 +735,14 @@ h3 {
 
     #new-arrivals .arrivals-list ul li {
         width: 33.33%;
+    }
+
+    #footer .footer-list {
+        flex-direction: column;
+    }
+
+    #footer .footer-list .story {
+        width: 100%;
     }
 }
 

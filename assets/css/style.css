@@ -37,10 +37,6 @@ h3 {
     padding: 0 76px;
 }
 
-.container-content {
-
-}
-
 .buttom {
     display: inline-block;
     padding: 10px 30px;
@@ -468,7 +464,7 @@ h3 {
     position: relative;
 }
 
-#new-arrivals .arrivals-list ul li:before {
+#new-arrivals .arrivals-list ul li .cover {
     position: absolute;
     top: 0;
     left: 0;
@@ -477,6 +473,7 @@ h3 {
     content: "";
     background: rgba(0, 0, 0, 0.5);
     display: none;
+    transition: all 1s;
 }
 
 #new-arrivals .arrivals-list ul li .info {
@@ -489,10 +486,11 @@ h3 {
     -webkit-transform: translate(-50% , -50%);
     -moz-transform: translate(-50% , -50%);
     -ms-transform: translate(-50% , -50%);
+    transition: all 2s;
     display: none;
 }
 
-#new-arrivals .arrivals-list ul li:hover li:before {
+#new-arrivals .arrivals-list ul li:hover .cover , #new-arrivals .arrivals-list ul li:hover .info {
     display: block;
 }
 
@@ -503,6 +501,10 @@ h3 {
 
 #new-arrivals .arrivals-list ul li img {
     width:100%
+}
+
+#new-arrivals .arrivals-list ul li h3 {
+    font-size: 16px;
 }
 
 #about-us .content-list ul.bottom {
@@ -520,6 +522,7 @@ h3 {
     justify-content: center;
     gap: 20px;
 }
+
 @media screen and (max-width:1200px) {
 
     #header-section .top-header {
@@ -541,6 +544,8 @@ h3 {
     #header-section .bottom-header .info {
         height: 80px;
     }
+
+    
 }
 
 @media screen and (max-width:960px) {
@@ -555,6 +560,10 @@ h3 {
     #collection-section .collection ul.banner li.category.third {
         display:none
     }
+
+    #new-arrivals .arrivals-list ul li {
+        width: 33.33%;
+    }
 }
 
 @media screen and (max-width:540px) {
@@ -568,5 +577,9 @@ h3 {
 
     #collection-section .collection ul.banner li.category.secound {
         display:none
+    }
+
+    #new-arrivals .arrivals-list ul li {
+        width: 50%;
     }
 }
